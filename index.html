@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title> Task Tracker App </title> 
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="main-heading">
+            TASK TRACKER
+        </h1>
+
+        <div class="task-container">
+            <input  id="add-task" type="text">
+            <button id="add-task-btn"> ADD Task </button>
+        </div>
+        <ul id="task-list">
+            <li class="task-item">
+                <input type="checkbox" class="task-checkbox">
+                <span class="task-text"> Hang Clothes </span>
+                <button class="delete-btn>"> Delete </button>
+            </li>
+        </ul>
+        <div id="task-counter">
+            <div class="counter-item">
+                <label> Total Tasks: </label>
+                <span id="total-tasks"> 0 </span>
+            </div>
+            
+            <div class="counter-item">
+                <label> Completed Tasks: </label>
+                <span id="completed-tasks"> 0 </span>
+            </div>
+            
+            <button id="clear-tasks"> Clear completed Tasks</button>
+        </div>
+    </div>
+    
+</body>
+</html>
