@@ -17,7 +17,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 800px;
+    width: 90%;
+    max-width: 800px;
     padding: 1.5rem;
     max-height: 80%;
     background-color: antiquewhite;
@@ -30,6 +31,11 @@ body{
     font-weight: 900;
 }
 
+.task-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 .task-container input{
     border: 1px solid black ;
     border-radius: 1rem;
@@ -66,7 +72,7 @@ body{
 .task-item{
     display: flex;
     align-items: center;
-    justify-content:space-evenly;
+    justify-content:space-between;
     background-color: rgb(231, 228, 228);
     padding: 0.8rem 1.2rem;
     margin-bottom: 0.8rem;
@@ -74,4 +80,63 @@ body{
     border-radius: 1rem;
 }
 
+.task-item:hover {
+    background-color: #e9dfb3;
+}
 
+.task-text{
+    flex: 1;
+    margin-left: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.task-checkbox {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.completed .task-text {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.delete-btn{
+    background: none;
+    border: none;
+    color: #a00;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    color: red;
+}
+
+#task-counter {
+    margin-top: 1.5rem;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.counter-item label {
+    font-weight: 600;
+}
+
+.counter-item span {
+    font-weight: 700;
+    margin-left: 0.2rem;
+}
+
+#clear-tasks {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: #f2c9c9;
+    cursor: pointer;
+}
+
+#clear-tasks:hover {
+    background-color: #e09a9a;
+}
