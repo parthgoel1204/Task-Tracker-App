@@ -52,6 +52,13 @@ addTaskButton.addEventListener("click",function(e){
     }
 });
 
+// Logic for using ENTER KEY to add task 
+addTaskValue.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+        addTaskButton.click();
+    }
+});
+
 // const listItem = document.querySelector(".task-item");
 // // console.log(listItem);
 // const checkbox = document.querySelector(".task-checkbox");

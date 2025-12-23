@@ -140,3 +140,57 @@ body{
 #clear-tasks:hover {
     background-color: #e09a9a;
 }
+
+@media (max-width: 600px){
+    .wrapper {
+        padding: 1rem;
+    }
+
+     .task-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.8rem;
+        width: 100%;
+    }
+
+    .task-container input {
+        width: 100%;
+        margin-right: 0;
+        font-size: 1.1rem;
+    }
+
+    #add-task-btn {
+        width: 100%;
+        height: 2.4rem;
+    }
+
+     #task-list {
+        width: 100%;
+    }
+
+     .task-item {
+        flex-wrap: wrap;
+        gap: 0.6rem;
+    }
+
+    .task-text {
+        font-size: 1.05rem;
+        margin-left: 0.4rem;
+    }
+
+    .delete-btn {
+        margin-left: auto;
+    }
+
+    #task-counter {
+        flex-direction: column;
+        gap: 0.6rem;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    #clear-tasks {
+        width: 100%;
+        text-align: center;
+    }
+}
