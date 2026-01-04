@@ -14,6 +14,10 @@ addTaskButton.addEventListener("click",function(e){
         input.classList.add("task-checkbox");
         input.type = "checkbox";
 
+        // unique id for so that same tasks can be distinguished
+        const taskId = Date.now();
+        li.dataset.id = taskId;
+
         input.addEventListener('change',function(e){
             if(input.checked){
                 li.classList.add('completed');
@@ -101,11 +105,12 @@ function storingTasks(){
     const allTasks=[];
     const taskItem = document.querySelectorAll(".task-item");
     taskItem.forEach(function(element){
+        const id = element.dataset.id;
         const text = element.querySelector(".task-text").textContent;
         // const stateCompleted = element.classList.contains("completed");
-        const completed = element.classList.contains("completed");
-
-        allTasks.push({text , completed});
+        const state = element.classList.contains("completed");
+        
+        allTasks.push({id, text, state});
     })
 
     localStorage.setItem("allTasks",JSON.stringify(allTasks));
@@ -118,15 +123,15 @@ function loadTasks(){
         const li = document.createElement("li");
         li.classList.add("task-item");
 
-        
-        if (task.completed) {
+        li.dataset.id = task.id;
+        if (task.state) {
             li.classList.add("completed");
         }
 
         const input = document.createElement("input")
         input.classList.add("task-checkbox");
         input.type = "checkbox";
-        input.checked = task.completed;
+        input.checked = task.state;
 
         input.addEventListener('change',function(e){
             li.classList.toggle("completed",input.checked);
